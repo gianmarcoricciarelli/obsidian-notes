@@ -10,7 +10,57 @@ In generale, viene considerata una pratica sbagliata quella di implementare logi
 
 ##### Definizione
 
+Il Presentational Pattern prevede la separazione delle logiche di UI da quelle di business tramite l'implementazione di due componenti:
 
+1. **Presentational Component**: il componente che si occuperà di come i dati vengono presentati all'utente. Riceve i dati da presentare attraverso le **prop** e si occupa soltanto di mostrarli all'utente applicando gli stili corretti, senza modificare i dati ricevuti in input.
+2. **Container Component**: il componente che si occuperà di recuperare, manipolare e decidere che tipo di dati vengono presentati all'utente. L'unica sua funzione è quella di passare i dati recuperati e, eventualmente, manipolati, al Presentational Component, che è contenuto al suo interno. Dal momento che di per sé non effettua render di alcun tipo, non prevede l'uso di stili o altro che possa essere definito UI.
+
+Per facilitare lo sviluppo, se le logiche di recupero e manipolazione dei dati diventano complesse e difficili da mantenere con il crescere della code base, è buona pratica racchiuderle all'interno di un [[Terminologia#Custom Hook|custom hook]].
+
+##### Esempio
+
+```tsx
+// Presentational Component: Transaction in Transaction.tsx
+
+interface TransactionProps {
+	id: number,
+	amount: number,
+	name: string,
+}
+
+export default function Transaction({ id, amount, name }: TransactionProps) {
+	const _className = // Styles' implementation
+	
+	return (
+		<div className={_className}>
+			{/* UI Implementation  */}
+		</div>
+	)
+}
+```
+
+```tsx
+// Container Component: Transactions in Transactions.tsx
+
+export default function Transactions() {
+	const transactions = fetchTransactions() // get the data
+
+	return (
+		<div>
+			{
+				transactions.map((transaction) => ( // pass the data
+					<Transaction
+						key={transaction.id}
+						id={transaction.id}
+						amount={transaction.amount}
+						name={transaction.name}
+					/>
+				))
+			}
+		</div>
+	)
+}
+```
 
 ### Composition Pattern
 
