@@ -3,6 +3,10 @@ tags:
   - react
   - frontend
 ---
+### Separation of Concerns
+
+Il termine Separation of Concerns è ampiamente usato nel contesto della programmazione. In generale, con Separation of Concerns si intende che l'implementazione di logiche che svolgono compiti differenti non dovrebbero essere raggruppate o combinate insieme. Un esempio pratico nel contesto di React è che le logiche di recupero di dati (da un server o da un'altra fonte qualsiasi) non dovrebbero essere mischiate con quelle di UI che li presentano all'utente.
+
 
 ### Prop Drilling
 

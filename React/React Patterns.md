@@ -4,6 +4,13 @@ tags:
   - design
   - frontend
 ---
+### Container/Presentational Pattern
+
+In generale, viene considerata una pratica sbagliata quella di implementare logiche di UI per presentare dei dati o dei contenuti e logiche di recupero o manipolazione di questi dati o contenuti nello stesso componente. Utilizzando il Presentational Pattern possiamo rafforzare il concetto di [[Terminologia#Separation of Concerns|Separation of Concerns]], separando quindi questi due tipi di logiche.
+
+##### Definizione
+
+
 
 ### Composition Pattern
 
