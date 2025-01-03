@@ -17,7 +17,7 @@ Il Presentational Pattern prevede la separazione delle logiche di UI da quelle d
 
 Per facilitare lo sviluppo, se le logiche di recupero e manipolazione dei dati diventano complesse e difficili da mantenere con il crescere della code base, è buona pratica racchiuderle all'interno di un [[Terminologia#Custom Hook|custom hook]].
 
-##### Esempio
+##### Esempio di implementazione
 
 ```tsx
 // Presentational Component: Transaction in Transaction.tsx
