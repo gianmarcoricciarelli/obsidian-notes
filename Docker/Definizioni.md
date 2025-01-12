@@ -17,3 +17,8 @@ Un **Container** viene creato a partire da un'Immagine e rappresenta la *running
 ### Volume
 
 Un **Volume** rappresenta un meccanismo di *data storage* usato per garantire la persistenza dei dati generati o usati all'interno di un Container. Differentemente dai container, caratterizzati dall'*ephemeral storage*, i Volume forniscono un modo per garantire che i dati non vengono perduti ogniqualvolta un Container viene stoppato o rimosso. 
+
+### Docker Compose
+
+**Docker Compose** è un tool per definire e organizzare applicazioni docker *multi-container*. Al posto di eseguire ripetutamente il comando `docker run` per ogni Container, possiamo definire tutti i Container, Network e Volume in un singolo file **YAML** chiamato `docker-compose.yml`. Con un singolo comando Docker Compose può avviare e gestire tutti questi componenti assieme.
+
