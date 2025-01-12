@@ -26,5 +26,19 @@ Di seguito una lista dei comandi più utilizzati in Docker, con spiegazione di o
 | `docker start <container_id_or_name>`              | Effettua il *restart* di un container stoppato                                                   | `docker start container_id`   |
 | `docker rm <container_id_or_name>`                 | Rimuove un container stoppato                                                                    | `docker rm container_id`      |
 
+### Volume
+
+| Comando                                                     | Speigazione                                                                            | Esempio                               |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------- |
+| `docker volume create <volume_name>`                        | Crea un *named [[Definizioni#Volume\|volume]]* per avere un *data storage* persistente | `docker volume create my_volume`      |
+| `docker volume ls`                                          | Mostra tutti i volume                                                                  | `docker volume ls`                    |
+| `docker run -v <volume_name>:<container_path> <image_name>` | Collega un volume ad un container                                                      | `docker run -v my_volume:/data nginx` |
+
 ### Log
 
+| Comando                                 | Spiegazione                                                            | Esempio                       |
+| --------------------------------------- | ---------------------------------------------------------------------- | ----------------------------- |
+| `docker logs <container_id_or_name>`    | Mostra i log relativi al container fornito in input                    | `docker logs container_id`    |
+| `docker inspect <container_id_or_name>` | Mostra informazioni dettagliate riguardo al container fornito in input | `docker inspect container_id` |
+
+### Docker compose
