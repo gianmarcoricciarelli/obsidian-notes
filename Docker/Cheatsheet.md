@@ -42,3 +42,14 @@ Di seguito una lista dei comandi più utilizzati in Docker, con spiegazione di o
 | `docker inspect <container_id_or_name>` | Mostra informazioni dettagliate riguardo al container fornito in input | `docker inspect container_id` |
 
 ### Docker compose
+
+| Comando               | Spiegazione                                                                                                    | Esempio               |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `docker-compose up`   | Eseguo lo start dei servizi (Container) definiti in un file [[Definizioni#Docker Compose\|docker-compose.yml]] | `docker-compose up`   |
+| `docker-compose down` | Stoppa i servizi e rimuove Container, Network e Volume creati tramite `docker-compose up`                      | `docker-compose down` |
+
+### Miscellanea
+
+| Comando               | Spiegazione                                       | Esempio               |
+| --------------------- | ------------------------------------------------- | --------------------- |
+| `dokcer system prune` | Rimuove i Container, Network e Image inutilizzati | `docker system prune` |
