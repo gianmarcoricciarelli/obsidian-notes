@@ -3,6 +3,9 @@ tags:
   - docker
   - tools
 ---
+Di seguito alcune definizioni dei termini utilizzati nel contesto di Docker. 
+Per approfondire consultare il [roadmap.sh](https://roadmap.sh/docker) dedicato a Docker.
+
 ### Image
 
 Un'**Immagine** Docker è un file *standalone* e immutabile contenente il codice, le dipendenze, le librerie, le variabili di ambiente e i file di configurazione necessari per eseguire un'applicazione. Può essere pensato come un template per la creazione dei Container.
