@@ -23,3 +23,23 @@ Utilizzando i `Custom Hook` è possibile:
 
 Riferimenti:
 - [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-let-you-share-stateful-logic-not-state-itself)
+
+### Fragment
+
+I `Fragment` sono uno dei componenti di libreria forniti da React, e possono essere utilizzati quando si ha la necessità di racchiudere uno o più componenti in un componente padre senza che il componente padre venga effettivamente renderizzato nel DOM. I Fragment sono a tutti gli effetti container fittizi. Possono essere usati con due tipi di sintassi tra di loro equivalenti:
+
+```tsx
+<>
+	// components
+</>
+```
+
+e
+
+```tsx
+<Fragment>
+	// components
+</Fragment>
+```
+
+Come riportato sopra, le due sintassi sono equivalenti. La seconda sintassi è però utilizzata quando si ha la necessità di assegnare la proprietà `key` al Fragment, ossia tutte le volte che il Fragment si trova all'interno di una lista.
