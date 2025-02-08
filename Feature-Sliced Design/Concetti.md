@@ -41,3 +41,18 @@ I segment dividono il codice di uno slice per il tipo di funzionalità. Similmen
 - `model`: data model - *schema*, *interface*, *store* e *business logic*;
 - `lib`: codice utilizzato da altri segment sullo stesso slice;
 - `config`: file di configurazione e quant'altro;
+
+### Esempio
+
+* 📂 `app`
+	* 📁 `routes`
+	* 📁 `analytics`
+* 📂 `pages`
+	* 📁 `home`
+	* 📂 `article-reader`
+		* 📁 `ui`
+		* 📁 `api`
+	* 📁 `settings`
+* 📂 `shared`
+	* 📁 `ui`
+	* 📁 `api`
