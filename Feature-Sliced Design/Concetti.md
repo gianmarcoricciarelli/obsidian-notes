@@ -29,6 +29,8 @@ Come vediamo dall'immagine poco sopra, i 7 tipi sono:
 
 I layer contrassegnati dall'asterisco, **app** e **shared**, sono layer speciali: possono contenere soltanto dei segment.
 
+Per un approfondimento sul concetto di Layer vedere [[Layers|il documento dedicato]].
+
 ##### Slices
 
 Gli slice dividono il codice per **business domain**. Non hanno vincoli di nome, e se possono creare a piacimento. NON possono, tuttavia, utilizzare agli slice dello stesso layer. Nell'immagine poco sopra possiamo vedere che il layer **entities** è diviso in 3 **slice**: **user**, **post** e **comment**. Secondo quanto detto, il segment user non può usare funzionalità definite negli altri due segment e viceversa.
