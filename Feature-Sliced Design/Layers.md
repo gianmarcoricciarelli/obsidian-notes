@@ -51,3 +51,16 @@ Di seguito la definizione per ognuno dei Layer riportati [[#^85829d|poco sopra]]
 
 Questo Layer rappresenta la base per il resto dell'applicazione. In questo Layer troviamo tutto quello che collega l'applicazione frontend con il mondo esterno, ossia con il *backend*, `third-party libraries` e variabili d'ambiente. Inoltre, Shared rappresenta anche il Layer nel quale possiamo definire le nostre librerie, che utilizzeremo estensivamente nel resto dell'applicazione.
 
+Assieme al Layer `app`, `shared` non contiene Slice; è composto soltanto da **Segment**, il terzo e ultimo livello organizzativo nella gerarchia del FSD. Questo perché `shared` non contiene logica di business, e questo significa quindi che i file presenti in `shared` possono importarsi tra loro.
+
+Tipicamente in `shared` possiamo trovare questi Segment:
+
+- `api` -- il client per effettuare richieste al backend, e, potenzialmente, le specifiche richiesta verso gli endpoint disponibili;
+- `ui` -- le componenti UI dell'applicazione. Da ricordare che i componenti in questo Segment, come negli altri, NON devono contenere **business logic**;
+- `lib` -- una collezione di librerie interne. Ogni libreria in questo Segment dovrebbe far riferimento ad un'area di azione, per esempio:
+	- `dates`
+	- `colors`
+	- `text manipulation`
+- `config` -- variabili d'ambiente, configurazioni globali dell'applicazione;
+- `routes` -- self-explanatory;
+- `i18n` -- setup per le traduzioni, file globali di traduzioni;
