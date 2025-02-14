@@ -64,3 +64,6 @@ Tipicamente in `shared` possiamo trovare questi Segment:
 - `config` -- variabili d'ambiente, configurazioni globali dell'applicazione;
 - `routes` -- self-explanatory;
 - `i18n` -- setup per le traduzioni, file globali di traduzioni;
+
+##### App
+
